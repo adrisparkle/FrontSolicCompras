@@ -4,22 +4,13 @@
       <div class="flex xs12 md4">
         <va-input
           :value="term"
-          :placeholder="$t('tables.searchByName')"
+          :placeholder="$t('Buscar por solicitante')"
           @input="search"
           removable
         >
           <va-icon name="fa fa-search" slot="prepend"></va-icon>
         </va-input>
       </div>
-      <!--
-      <div class="flex xs12 md3">
-        <va-date-picker
-          :label="$t('Buscar por fecha')"
-          v-model="date"
-          :value="dateSearch"
-        />
-      </div>
-      -->
       <div class="flex xs12 md2 offset--md6">
         <va-select
           v-model="perPage"
@@ -52,7 +43,7 @@ export default {
       term: null,
       dateSearch: null,
       perPage: '5',
-      perPageOptions: ['5', '10', '15', '20'],
+      perPageOptions: ['5', '10', '15', '20', '50', '100'],
       items: [],
       loading: false,
       date: '2019-05-09',
@@ -90,7 +81,6 @@ export default {
       if (!this.term || this.term.length < 1) {
         return this.items
       }
-
       return this.items.filter(item => {
         return item.solicitante.toLowerCase().startsWith(this.term.toLowerCase())
       })
@@ -105,7 +95,6 @@ export default {
     }, 400),
     readItems (page = 0) {
       this.loading = true
-
       axios.get('/PurchaseSearch/')
         .then(response => {
           this.items = response.data

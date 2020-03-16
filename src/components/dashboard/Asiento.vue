@@ -17,6 +17,7 @@
               {{ $t('Volver a pago') }}
             </va-button>
           </div>
+          <p class="display-2" style="margin-left: 30px">Asiento contable</p>
           <va-list fit class="mb-2">
             <va-list-label>
               {{ $t('Asiento contable') }}

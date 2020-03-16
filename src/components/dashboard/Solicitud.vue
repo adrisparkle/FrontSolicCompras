@@ -14,6 +14,7 @@
         </div>
         <div class="row">
           <div class="flex xs6 lg6">
+            <p class="display-2" style="margin-left: 30px">Solicitud de compra</p>
             <va-list fit class="mb-2">
               <va-list-label>
                 {{ $t('Solicitud de compras') }}

@@ -11,6 +11,7 @@
       </div>
       <div class="row" >
         <div class="flex xs6 lg6">
+          <p class="display-2" style="margin-left: 30px">Factura de proveedores</p>
           <va-list fit class="mb-2">
             <va-list-label>
               {{ $t('Factura de proveedores') }}

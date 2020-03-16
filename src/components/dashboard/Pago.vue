@@ -15,6 +15,7 @@
               {{ $t('Volver al mapa de relaciones') }}
             </va-button>
           </div>
+          <p class="display-2" style="margin-left: 30px">Pagos efectuados</p>
           <va-list fit class="mb-2">
             <va-list-label>
               {{ $t('Pagos efectuados') }}
