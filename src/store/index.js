@@ -55,6 +55,7 @@ export default new Vuex.Store({
           data: {
             username: user.email, // This is the body part
             password: user.password,
+            system: 'COMPRAS',
           },
         })
           .then(resp => {
